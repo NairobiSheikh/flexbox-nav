@@ -1,0 +1,78 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  background-image: linear-gradient(260deg, #2376ae 0%, #9C27B0 100%);
+}
+
+a {
+  color: #fff;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px 5px;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  transition: all 0.5;
+}
+
+a:hover {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+/* flexbox container */
+.flex-nav ul {
+  border: 1px solid #000;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display:flex;
+  /*align-items: baseline;*/
+}
+
+.flex-nav li {
+ flex: 3;
+}
+.flex-nav .social {
+  flex:1;
+}
+
+/* moble size */
+@media all and (max-width: 1000px) {
+  /* seleict the flex container */
+  .flex-nav ul {
+    flex-wrap: wrap; /* do this to drop the item to the line */
+  }
+
+  /* seleict the list of items to grow, shrinck, and basline */
+  .flex-nav li {
+    flex: 1 1 50%;
+  }
+
+  /* for the the flex basis to not ge over ride by the ".flex-nav .social" above do  */
+  .flex-nav .social {
+    flex: 1 1 25%;
+  }
+}
+
+@media all and (max-width: 500px) {
+/* just to over ride the 50% flex basis do */
+  .flex-nav li {
+    flex-basis:100%; /* this will make the items into columns on 500px screen size */
+  }
+}

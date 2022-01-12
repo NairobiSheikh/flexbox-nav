@@ -29,10 +29,32 @@ a:hover {
   background: rgba(0, 0, 0, 0.3);
 }
 
+.toggleNav {
+  display: none;
+}
+
+img {
+  width: 100%;
+}
+
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
   padding: 50px;
+}
+
+input {
+  padding: 10px;
+  border: 0;
+}
+
+section, footer {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 20px 0;
+  color: #fff;
+  font-weight: 100;
 }
 
 /* flexbox container */
@@ -49,7 +71,7 @@ a:hover {
  flex: 3;
 }
 .flex-nav .social {
-  flex:1;
+  flex: 1;
 }
 
 /* moble size */
@@ -73,6 +95,6 @@ a:hover {
 @media all and (max-width: 500px) {
 /* just to over ride the 50% flex basis do */
   .flex-nav li {
-    flex-basis:100%; /* this will make the items into columns on 500px screen size */
+    flex-basis: 100%; /* this will make the items into columns on 500px screen size */
   }
 }
